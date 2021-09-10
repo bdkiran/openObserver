@@ -1,0 +1,13 @@
+/env
+/.vscode
+**/__pycache__
+
+# Large files no good
+**.png
+**.jpeg
+**.jpeg
+**.onnx
+
+**.o
+**.sconsign.dblite
+
