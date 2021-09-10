@@ -1,3 +1,5 @@
+![observer eye](eye.png)
+
 # openObserver
 
 ## About openObserver
