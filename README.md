@@ -1,4 +1,4 @@
-![observer eye](eye.png)
+![observer eye](extras/eye.png)
 
 # openObserver
 
