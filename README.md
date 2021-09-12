@@ -2,9 +2,11 @@
 
 # openObserver
 
+OpenObserver is a platform for building and packaging intelligent IOT devices. It emphasizes performance for running machine learning models on resource constrained devices. 
+
 ## About openObserver
 
-openObserver is a system and framework for building embeded systems that run machine learning models. This specific repository contains code that will run object tracking. It is designed to be extensible so newer steps can be added in to achieve your goals.
+The openObserver platform is built to be modular and extensible. Different models and workloads require different needs. To accommodate this open observer has an architecture built around adding and number of steps to complete in any particular task. Drop in any onyx model and provide any pre-and post processing steps to achieve your goal.
 
 ## Getting Started
 
@@ -19,6 +21,22 @@ openObserver is a system and framework for building embeded systems that run mac
 1. In the resources directory and places the files from the previous step in there.
 
 1. From the root directory, run `python3 main.py`
+
+## Roadmap
+
+1. convert message que to C++ and Cython. This is under the directory supaque.
+
+1. Provide object serialization to MessagePack, Cap'n Proto or Protobuff. The serialization framework will be decided later up to suggestions.
+
+1. Update post processing code to C++.
+
+1. Create an interface for sending data back to the server using RPC(encoding can be in JSON or protopbuf).
+
+1. Allow the output to stream video over “web RTC”(probably not technically web RTC but something similar).
+
+1. Create tests and increase code coverage significantly.
+
+1. Sufficiently document each individual module or sub project.
 
 ## Special Thanks
 
