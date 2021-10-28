@@ -164,7 +164,7 @@ def read_class_names(class_file_name):
     return names
 
 #Change this. We dont want this to load everytime....
-CLASSES=read_class_names("./resources/coco.names")
+CLASSES=read_class_names("./detect/resources/coco.names")
 
 def draw_bbox(image, bboxes, classes=CLASSES, show_label=True):
     """

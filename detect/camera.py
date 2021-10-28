@@ -1,8 +1,8 @@
 import cv2
 import logging as log
 import numpy as np
-from detect.yolov4_processing import image_preprocess
-import queuer.publisher as publisher
+from detect.resources.yolov4_processing import image_preprocess
+from queuer.publisher import Publisher
 
 def run_camera_capture():
     log.info("Starting to run camera...")
@@ -16,6 +16,9 @@ def run_camera_capture():
 
     input_size = 416
 
+    camera_frame_pub = Publisher('camera_frames')
+    processed_fram_pub = Publisher('processed_images')
+
     i = 0
     while True:
         log.info("Procces frame: " + str(i))
@@ -27,8 +30,8 @@ def run_camera_capture():
 
         image_data = preprocess(frame, input_size)
 
-        publisher.publish_message_object('camera_frames', frame)
-        publisher.publish_message_object('preprocessed_images', image_data)
+        camera_frame_pub.publish_message_object(frame)
+        processed_fram_pub.publish_message_object(image_data)
         i += 1
         
     video_capture.release()

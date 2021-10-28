@@ -4,7 +4,7 @@ import logging as log
 import queuer.subscriber as subscriber
 import numpy as np
 import time
-from detect.yolov4_processing import postProcessFrameStream
+from detect.resources.yolov4_processing import postProcessFrameStream
 
 from detect.sort import sort
 
